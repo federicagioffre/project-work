@@ -1,0 +1,400 @@
+/* Stile di base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    color: rgb(6, 6, 6);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenitore che tiene insieme logo e nav */
+header .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1; /* Per permettere al menu di essere centrato */
+}
+
+header nav {
+    flex-grow: 2;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header .logo img {
+    height: 100px;
+    width: auto;
+    margin-right: 30px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: rgb(8, 8, 8);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: #f9f7f7;
+    border-radius: 5px;
+}
+
+.intro-image {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.intro-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Stile delle sezioni */
+section {
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    margin-top: 60px;
+}
+
+#storia {
+    background-color: #ffe4b5;
+    scroll-margin-top: 120px;
+    text-align: center;
+    font-size: 1.30rem;
+    line-height: 1.8;
+}
+
+#menu {
+    background-color: #ffd700;
+    scroll-margin-top: 130px; /* Aggiungi questa riga */
+}
+
+.menu-gallery {
+    position: relative;
+    width: 100%;
+    max-width: 500px; /* Adatta alla dimensione desiderata */
+    height: 400px;
+    overflow: hidden;
+    margin: 0 auto; /* Centra orizzontalmente */
+    display: block;
+}
+
+.menu-gallery img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.menu-gallery img.active {
+    opacity: 1;
+}
+
+#prenotazioni {
+    background-color: #ff6347;
+    color: white;
+    font-family: Arial, sans-;
+    margin-bottom: 80px; /* Riduce lo spazio sotto la sezione */
+    padding-bottom: 10px; /* Meno spazio sotto il form */
+    scroll-margin-top: 130px; /* Aggiungi questa riga */
+}
+
+/* Stile dei form */
+.prenotazioni-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+    margin-bottom: 20px; /* Aumenta la distanza tra la prima e la seconda riga */
+}
+
+.form-group {
+    flex: 5;
+    min-width: 200px;
+}
+
+.form-group.full-width {
+    flex: 1 0 100%;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input, button {
+    width: 90%;
+    padding: 8px;
+    font-size: 16px;
+}
+
+button {
+    background-color: white;
+    color: rgb(4, 4, 4);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #49d000;
+}
+
+/* Stile specifico per il bottone "PRENOTA" */
+#bottone-prenota {
+    width: 100px; /* Larghezza desiderata */
+    display: block; /* Assicura che si possa centrare */
+    margin: 10px auto; /* Lo centra orizzontalmente */
+}
+
+#utenti-list {
+    visibility: hidden;
+}
+
+/* Sezione Modifica Prenotazione */
+#modifica-prenotazione {
+    background-color: #ff6347; /* Stesso colore della sezione Prenotazioni */
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;  /* Ora è largo come la sezione Prenotazioni */
+    margin-left: 0;
+    margin-right: auto;
+    margin-top: 60px; /* Aumenta la distanza da sopra */
+}
+
+#modifica-prenotazione h1, 
+#modifica-prenotazione h2 {
+    text-align: center;
+}
+
+#modifica-prenotazione input, 
+#modifica-prenotazione button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+#modifica-prenotazione button {
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#modifica-prenotazione button:hover {
+    background-color: #49d000;
+}
+
+#prenotazione-trovata {
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.prenotazioni-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.form-row .form-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Per allineare i campi Numero Persone, Data e Ora Arrivo */
+.form-row-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+
+.form-row-bottom .form-group {
+    flex: 1;
+    min-width: 150px;
+}
+
+/* Generale per il form */
+#modifica-prenotazione {
+    background-color: #ff6347; /* Usa lo stesso colore di sfondo del form prenotazione */
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    width: 80%; /* Larghezza simile alla sezione prenotazioni */
+    margin-left: 0; /* Allinea a sinistra */
+    margin-right: auto; /* Assicura che il contenuto si allinei a sinistra */
+}
+
+/* Struttura simile a .form-row e .form-group */
+#modifica-prenotazione .form-row,
+#modifica-prenotazione .form-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+#modifica-prenotazione .form-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+#modifica-prenotazione .form-group.full-width {
+    flex: 1 0 100%;
+    text-align: center;
+}
+
+/* Allineamento centrale per il form di modifica */
+#modifica-prenotazione form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+/* Bottone Salva Modifiche */
+#modifica-prenotazione button {
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 200px; /* Larghezza fissa per il bottone */
+    margin: 20px auto 0; /* Margine sopra e sotto, centrato orizzontalmente */
+    display: block; /* Impostiamo il bottone come block per poterlo centrare */
+}
+
+#modifica-prenotazione button:hover {
+    background-color: #49d000;
+}
+
+/* Bottone Cancella Prenotazione */
+#cancellaPrenotazioneButton {
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 200px;
+    margin: 10px auto 0; /* Stesso allineamento del bottone Salva */
+    display: block;
+}
+
+#cancellaPrenotazioneButton:hover {
+    background-color: #d00000; /* Cambia colore in rosso scuro quando si passa sopra */
+    color: white;
+}
+
+/* Allinea il titolo e la sezione email a sinistra */
+#modifica-prenotazione h1, 
+#modifica-prenotazione h2 {
+    text-align: left; /* Allinea il titolo a sinistra */
+    margin-left: 0; /* Assicurati che non ci siano margini a sinistra */
+}
+
+#email-filter-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Allinea gli input e il bottone a sinistra */
+    width: 40%; /* Puoi modificare la larghezza a seconda delle tue preferenze */
+    margin: 0; /* Rimuove margini aggiuntivi */
+    padding: 0; /* Rimuove padding */
+    margin-top: 20px; /* Distanza dalla sezione precedente */
+}
+
+#email-filter-section label,
+#email-filter-section input,
+#email-filter-section button {
+    width: 100%; /* Assicura che gli input e il bottone abbiano la larghezza massima possibile */
+}
+
+#email-filter-section button {
+    width: auto; /* Impostiamo la larghezza del bottone in base al contenuto */
+    margin-top: 10px; /* Distanza tra il bottone e l'input */
+}
+
+#email-filter-section button:hover {
+    background-color: #49d000;
+}
+
+/* Contenitore delle icone */
+.icons-container {
+    position: fixed; /* Mantiene le icone fisse nella schermata */
+    top: 10px; /* Distanza dal bordo superiore */
+    right: 10px; /* Sposta le icone a sinistra invece che a destra */
+    display: flex; /* Allinea le icone orizzontalmente */
+    gap: 15px; /* Distanza tra le icone */
+    z-index: 1100; /* Assicura che le icone siano sopra altri contenuti */
+}
+
+/* Stile per le immagini delle icone */
+.map-icon img,
+.phone-icon img,
+.facebook-icon img {
+    width: 35px !important; /* Imposta la larghezza per tutte le icone */
+    height: 35px !important; /* Imposta l'altezza per tutte le icone */
+    object-fit: contain; /* Evita distorsioni dell'immagine */
+    display: block; /* Evita spazi indesiderati sotto le immagini */
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Effetto hover per tutte le icone */
+.map-icon img:hover,
+.phone-icon img:hover,
+.facebook-icon img:hover {
+    transform: scale(1.1); /* Leggero ingrandimento al passaggio del mouse */
+}
+

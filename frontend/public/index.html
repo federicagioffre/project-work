@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ristorante Santa Barbara</title>
+    <link rel="stylesheet" href="/frontend/public/styles.css">
+    <link rel="icon" href="../static/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Intestazione fissa -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="../static/Santa_Barbara_Logo_modificato.jpg" alt="Logo Ristorante">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#storia">La Nostra Storia</a></li>
+                    <li><a href="#menu">Il Menù</a></li>
+                    <li><a href="#prenotazioni">Prenota il tuo Tavolo</a></li>
+                </ul>
+            </nav>
+        </div>
+    
+    <!-- Contenitore per le icone -->
+    <div class="icons-container">
+        <!-- Icona Google Maps -->
+        <a href="https://www.google.it/maps/place/Santabarbara+1789/@38.2925962,15.8155621,17z/data=!4m14!1m7!3m6!1s0x131500f008e57285:0x9f9d649e23290abe!2sSantabarbara+1789!8m2!3d38.292592!4d15.818137!16s%2Fg%2F1tdhh3y6?entry=ttu&g_ep=EgoyMDI1MDIxOS4xIKXMDSoASAFQAw%3D%3D" target="_blank" class="map-icon">
+            <img src="../static/google-maps.png" alt="Posizione su Google Maps">
+        </a>
+
+        <!-- Icona Telefono -->
+        <a href="tel:+390966337533" class="phone-icon">
+            <img src="../static/telephone.png" alt="Telefono">
+        </a>
+
+         <!-- Icona Facebook -->
+    <a href="https://www.facebook.com/toninoasud" target="_blank" class="facebook-icon">
+        <img src="../static/facebook.png" alt="Pagina Facebook">
+    </a>
+    </div>
+</header>
+
+    <div class="intro-image">
+        <img src="../static/tramonto.jpg" alt="Immagine tramonto">
+    </div>
+
+    <!-- Sezione Storia -->
+    <section id="storia">
+        <h1>La Nostra Storia</h1>
+        <p>Negli anni 80, Gioffrè Giuseppe, un uomo tenace e laborioso, acquistò una stalla per il bestiame proprio nella località Santa Barbara di Bagnara Calabra. Con il passare del tempo però le normative cambiarono e la stalla fu dismessa. Quel luogo così significativo per la famiglia Gioffrè rischiava di cadere nell'oblio, ma Tonino, animato da uno spirito visionario, vide subito un'opportunità. Nel 2005 prese una decisione audace: trasformare quel vecchio edificio in un ristorante. Così nacque il Ristorante Santa Barbara, un luogo che oggi unisce tradizione e innovazione. È stato ristrutturato con cura, rispettando la bellezza naturale del paesaggio circostante, le ampie vetrate permettono alla clientela di ammirare il magnifico panorama: le infinite acque dello Stretto di Messina si fondono con i colori cangianti del cielo, creando un'atmosfera incantevole. Al Ristorante Santa Barbara si gustano piatti deliziosi, sicuramente la carne è il punto di forza ma non mancano le proposte di mare. È il sogno di Tonino divenuto realtà, un omaggio alle radici familiari e a quel panorama che, da sempre, incanta chiunque si soffermi.</p>
+    </section>
+
+    <!-- Sezione Menù -->
+    <section id="menu">
+        <h1>Il Menù</h1>
+        <p>Esplora i nostri piatti deliziosi e le specialità della casa.</p>
+        <div class="menu-gallery">
+            <img src="../static/antipasto.jpg">
+            <img src="../static/antipasto1.jpg">
+            <img src="../static/carne arrosto.jpg">
+            <img src="../static/carne arrosto1.jpg">
+            <img src="../static/primo.jpg">
+        </div>
+    </section>
+
+    <!-- Sezione Prenotazioni -->
+<section id="prenotazioni">
+    <h1>Prenota il tuo Tavolo</h1>
+    <form id="prenotazioneForm">
+        <!-- Prima riga (Nome, Cognome, Telefono, Email) -->
+        <div class="form-row">
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="cognome">Cognome</label>
+                <input type="text" id="cognome" name="cognome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Telefono</label>
+                <input type="tel" id="telefono" name="telefono" required>
+            </div>
+        </div>
+
+        <!-- Seconda riga (Numero persone, Data, Ora di arrivo) -->
+        <div class="form-row">
+            <div class="form-group">
+                <label for="numero_persone">Numero Persone</label>
+                <input type="number" id="numero_persone" name="numero_persone" required>
+            </div>
+            <div class="form-group">
+                <label for="data">Data</label>
+                <input type="date" id="data" name="data" required>
+            </div>
+            <div class="form-group">
+                <label for="ora_arrivo">Ora di Arrivo</label>
+                <input type="time" id="ora_arrivo" name="ora_arrivo" required>
+            </div>
+        </div>
+
+        <div class="form-group full-width">
+            <button id="bottone-prenota" type="submit">Prenota</button>
+        </div>
+    </form>
+    
+    <!-- Sezione Modifica Prenotazione -->
+    <section id="modifica-prenotazione">
+        <h2>Per modificare la tua prenotazione</h2>
+    
+        <!-- Sezione input email e bottone -->
+        <div id="email-filter-section">
+            <label for="emailFilter">Inserisci la tua email</label>
+            <input type="email" id="emailFilter" name="emailFilter" required>
+            <button type="submit" id="cercaPrenotazione">Cerca Prenotazione</button>
+        </div>
+    
+        <!-- Form di modifica (verrà riempito dopo la ricerca) -->
+        <div id="prenotazione-trovata" style="display: none;">
+            <h3>Modifica la tua prenotazione</h3>
+            <form id="modificaForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="modifica_nome">Nome</label>
+                        <input type="text" id="modifica_nome" name="modifica_nome">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="modifica_cognome">Cognome</label>
+                        <input type="text" id="modifica_cognome" name="modifica_cognome">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="modifica_email">Email</label>
+                        <input type="email" id="modifica_email" name="modifica_email" readonly>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="modifica_telefono">Telefono</label>
+                        <input type="tel" id="modifica_telefono" name="modifica_telefono">
+                    </div>
+                </div>
+    
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="modifica_numero_persone">Numero Persone</label>
+                        <input type="number" id="modifica_numero_persone" name="modifica_numero_persone">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="modifica_data">Data</label>
+                        <input type="date" id="modifica_data" name="modifica_data">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="modifica_ora_arrivo">Ora di Arrivo</label>
+                        <input type="time" id="modifica_ora_arrivo" name="modifica_ora_arrivo">
+                    </div>
+                </div>
+    
+                <button type="submit">Salva Modifiche</button>
+                <button id="cancellaPrenotazioneButton" class="btn btn-danger">Cancella Prenotazione</button>
+            </form>
+        </div>
+    </section>    
+
+    <script src="script.js"></script>
+</body>
+</html>
+
